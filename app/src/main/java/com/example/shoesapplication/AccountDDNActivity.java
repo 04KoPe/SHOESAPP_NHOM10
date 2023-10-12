@@ -1,5 +1,6 @@
 package com.example.shoesapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -20,15 +21,22 @@ public class AccountDDNActivity extends AppCompatActivity {
         btnavview = findViewById(R.id.bottomNavigation);
         btnavview.setSelectedItemId(R.id.account);
 
+        //dieu huong den cac trang
         btnavview.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.account:
+
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(), SignUpActivity.class));
+                        overridePendingTransition(0, 0);
                         return true;
                 }
                 return false;
             }
         });
+
     }
 }
