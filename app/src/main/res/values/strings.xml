@@ -15,10 +15,11 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="signUpText">Sign Up</string>
+    <string name="SignUpText">Sign Up</string>
     <string name="SignUpText2">Sign Up</string>
     <string name="Fill">Fill your information below or register with your social account</string>
     <string name="confirmAgreement">Terms and Conditions</string>
     <string name="agree">Agree with</string>
     <string name="title_activity_sign_up">SignUpActivity</string>
-
 </resources>
