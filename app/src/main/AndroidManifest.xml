@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.shoesapplication.LogInActivity"/>
-        <activity android:name="com.example.shoesapplication.SignUpActivity" />
-        <activity android:name="com.example.shoesapplication.AccountDDNActivity">
+        <activity android:name=".AccountDDNActivity"></activity>
+        <activity android:name=".LogInActivity" />
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".ProductsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
