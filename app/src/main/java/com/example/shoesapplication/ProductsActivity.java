@@ -31,12 +31,12 @@ public class ProductsActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
+                    case R.id.home:
+
+                        return true;
                     case R.id.account:
                         startActivity(new Intent(getApplicationContext(), AccountDDNActivity.class));
                         overridePendingTransition(0, 0);
-                        return true;
-                    case R.id.home:
-
                         return true;
                     case R.id.search:
 
@@ -50,22 +50,27 @@ public class ProductsActivity extends AppCompatActivity {
         });
 
         rv= findViewById(R.id.recyclerview_nike);
-        List<String> name = new ArrayList<>();
-        name.add("hehe");
-        name.add("erewre");
-        name.add("ewrwer");
-        name.add("hehe");
-        name.add("erewre");
-        name.add("ewrwer");
-        name.add("hehe");
-        name.add("erewre");
-        name.add("ewrwer");
-        name.add("hehe");
-        name.add("erewre");
-        name.add("ewrwer");
+        List<Product> nike = new ArrayList<>();
+        nike.add(new Product("Nike Air Jordan 1 Low GS ‘White Gym Red’",R.drawable.nike_1));
+        nike.add(new Product("Nike Dunk Low Athletic Department Casual Shoes",R.drawable.nike_2));
         rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
-        ProductsAdapter adapter = new ProductsAdapter(this, name);
-        rv.setAdapter(adapter);
+        ProductsAdapter adapter_nike = new ProductsAdapter(this, nike);
+        rv.setAdapter(adapter_nike);
 
+        rv= findViewById(R.id.recyclerview_converse);
+        List<Product> converse = new ArrayList<>();
+        converse.add(new Product("Converse Chuck Taylor All Star Construct",R.drawable.converse_1));
+        converse.add(new Product("Converse Converse Chuck 70 Patchwork Floral",R.drawable.converse_2));
+        rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        ProductsAdapter adapter_converse = new ProductsAdapter(this, converse);
+        rv.setAdapter(adapter_converse);
+
+        rv= findViewById(R.id.recyclerview_vans);
+        List<Product> vans = new ArrayList<>();
+        vans.add(new Product("Vans Classic Authentic Shoes",R.drawable.vans_1));
+        vans.add(new Product("Vans Off The Wall Shoes",R.drawable.vans_2));
+        rv.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        ProductsAdapter adapter_vans = new ProductsAdapter(this, vans);
+        rv.setAdapter(adapter_vans);
     }
 }

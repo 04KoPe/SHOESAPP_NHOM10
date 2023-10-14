@@ -13,9 +13,9 @@ import java.util.List;
 public class ProductsAdapter extends RecyclerView.Adapter<ProductsHolder> {
 
     Context c;
-    List<String> data;
+    List<Product> data;
 
-    public ProductsAdapter(Context c, List<String> data) {
+    public ProductsAdapter(Context c, List<Product> data) {
         this.c = c;
         this.data = data;
     }
@@ -29,8 +29,8 @@ public class ProductsAdapter extends RecyclerView.Adapter<ProductsHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ProductsHolder holder, int position) {
-
-        holder.txtName.setText(data.get(position));
+        holder.txtName.setText(data.get(position).name);
+        holder.imgName.setImageResource(data.get(position).imgID);
     }
 
     @Override
